@@ -1,13 +1,80 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/10/27/14/hoia-baciu-2.jpg?w968h681") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(16, 19, 19);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.locationCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.locationCardContent {
+  display: flex;
+  background-image: radial-gradient(rgb(255, 255, 255), rgb(196, 194, 196));
+  flex-wrap: wrap;
+  max-width: 20em;
+  min-width: 20em;
+  min-height: 20em;
+  padding: 1.5em;
+  justify-content: space-evenly;
+  flex-direction: column; 
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: rgb(16, 19, 19);
+}
+
+a:hover {
+  color: rgb(255, 255, 224);
+  text-decoration: none;
+  text-shadow: rgb(255, 255, 224) 0px 0px 6px;
+}
+
+.mainHeader {
+  text-align: center;
+  font-family: 'Pirata One', cursive;
+  font-size: 7em;
+  color: rgb(16, 19, 19);
+}
+
+button {
+  border-radius: 0.4em;
+  border-color: rgb(16, 19, 19);
+  background-color: rgb(16, 19, 19);
+  color: rgb(255, 255, 224);
+  max-height: 3em;
+  max-width: 5em;
+}
+
+button:hover {
+  border-color: rgb(16, 19, 19);
+  background-color: rgb(16, 19, 19);
+  text-shadow: rgb(255, 255, 224) 0px 0px 6px;
+  color: rgb(255, 255, 224);
+}
+
+.welcomeDiv {
+  display: flex;
+  text-align: center;
+  padding: 2em;
+}
+
+.modal-content {
+  background-image: radial-gradient(rgb(255, 255, 255), rgb(196, 194, 196));
+  color: rgb(16, 19, 19);
 }
