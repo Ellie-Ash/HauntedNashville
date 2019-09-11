@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DataManager from '../DataManager';
+import LocationReviewModal from './LocationReviewModal';
 
 class LocationDetail extends Component {
 
@@ -27,6 +28,8 @@ class LocationDetail extends Component {
             <h3>{this.state.title}</h3>
             <p>{this.state.location}</p>
             <p>{this.state.marker_text}</p>
+            <br/>
+            <LocationReviewModal  />
         </div>
       </div>
     );

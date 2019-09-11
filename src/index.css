@@ -15,14 +15,43 @@ body {
 
 .locationCardContent {
   display: flex;
-  background-image: radial-gradient(rgb(255, 255, 255), rgb(196, 194, 196));
+  background-color: rgb(237, 235, 235);
+  border-radius: 4px;
+  /* opacity: 0.8; */
   flex-wrap: wrap;
   max-width: 20em;
   min-width: 20em;
+  min-height: 25em;
+  max-height: 25em;
+  padding: 1.5em;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column; 
+}
+
+.locationDetailContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.locationDetailContent {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 40em;
   min-height: 20em;
   padding: 1.5em;
   justify-content: space-evenly;
-  flex-direction: column; 
+  flex-direction: column;
+}
+
+.spookyLocationIcon {
+  max-width: 30%;
+  display: flex;
+  background-color: rgb(137, 103, 143);
+  border-radius: 100%;
+  padding: 4px;
 }
 
 .navBar {
@@ -31,18 +60,32 @@ body {
   justify-content: space-evenly;
 }
 
+input {
+  width: 98%;
+  margin: 4px;
+}
+
+ul {
+  padding-left: 0%;
+}
+
 li {
   list-style-type: none;
 }
 
+p {
+  font-size: 18px;
+}
+
 a {
   color: rgb(16, 19, 19);
+  font-size: 18px;
 }
 
 a:hover {
-  color: rgb(255, 255, 224);
+  color: rgb(254, 229, 86);
   text-decoration: none;
-  text-shadow: rgb(255, 255, 224) 0px 0px 6px;
+  /* text-shadow: rgb(255, 255, 224) 0px 0px 10px; */
 }
 
 .mainHeader {
@@ -56,7 +99,7 @@ button {
   border-radius: 0.4em;
   border-color: rgb(16, 19, 19);
   background-color: rgb(16, 19, 19);
-  color: rgb(255, 255, 224);
+  color: rgb(254, 229, 86);
   max-height: 3em;
   max-width: 5em;
 }
@@ -64,8 +107,8 @@ button {
 button:hover {
   border-color: rgb(16, 19, 19);
   background-color: rgb(16, 19, 19);
-  text-shadow: rgb(255, 255, 224) 0px 0px 6px;
-  color: rgb(255, 255, 224);
+  /* text-shadow: rgb(255, 255, 179) 0px 0px 10px; */
+  color: rgb(254, 229, 86);
 }
 
 .welcomeDiv {
@@ -75,6 +118,6 @@ button:hover {
 }
 
 .modal-content {
-  background-image: radial-gradient(rgb(255, 255, 255), rgb(196, 194, 196));
+  background-color: rgb(237, 235, 235);
   color: rgb(16, 19, 19);
 }

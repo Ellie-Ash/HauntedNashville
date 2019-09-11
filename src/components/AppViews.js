@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import AuthMain from './auth/AuthMain'
 import LocationMain from './locations/LocationMain'
 import SavedLocation from './saved/SavedLocation'
+import LocationDetail from './locations/LocationDetail'
 
 export default class AppViews extends Component {
   isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
@@ -28,6 +29,14 @@ export default class AppViews extends Component {
             }
               return <AuthMain {...props} />
           }}
+        />
+        <Route exact path="/locations/:locationId(\d+)" render={props => {
+            if (this.isAuthenticated()) {
+                return <LocationDetail locationId={parseInt(props.match.params.locationId)}/>
+                  
+            }
+                return <AuthMain {...props} />
+            }}
         />
 
         <Route

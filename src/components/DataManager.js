@@ -6,12 +6,31 @@ export default {
         return fetch(`https://data.nashville.gov/resource/vk65-u7my.json`)
             .then(response  => response.json())
             .then(result => {
-                    console.log(result)
+                    console.log(result, "all from fetch")
                     return result
             })
     },
     getLocation(id) {
-        return fetch(`https://data.nashville.gov/resource/vk65-u7my.json?number=${id}`).then(result => result.json())
+        return fetch(`https://data.nashville.gov/resource/vk65-u7my.json?number=${id}`)
+        .then(result => result.json())
+        .then(response => {
+            console.log(response, "in fetch")
+            return response[0]
+        })
+    },
+
+    //REVIEWS 
+    getAllReviews() {
+        return fetch(`${remoteURL}/reviews`).then(result => result.json())
+    },
+    postReview(newReview) {
+        return fetch(`${remoteURL}/reviews`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newReview)
+        }).then(data => data.json())
     },
 
 

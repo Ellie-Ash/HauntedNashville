@@ -12,5 +12,19 @@
       "password": "1",
       "id": 2
     }
+  ],
+  "reviews": [
+    {
+        "locationId": 2,
+        "userId": 1,
+        "rating": "5",
+        "review": "This is very haunted"
+    },
+    {
+        "locationId": 3,
+        "userId": 2,
+        "rating": "1",
+        "review": "This is NOT very haunted"
+    }
   ]
 }
