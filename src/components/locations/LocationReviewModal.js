@@ -86,6 +86,7 @@ class LocationReviewModal extends React.Component {
                                 <Rating
                                 name="rating"
                                 id="rating"
+                                initialRating="0"
                                 emptySymbol={<span style={{ color: 'gray' }}><i className="fas fa-ghost fa-2x"></i></span>}
                                 fullSymbol={<span style={{ color: 'black' }}><i className="fas fa-ghost fa-2x"></i></span>}
                                 onChange={this.handleRatingChange} 
