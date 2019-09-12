@@ -13,7 +13,7 @@ class LocationCard extends Component {
           
           <h4>{this.props.location.title}</h4>
           <p>{this.props.location.location}</p>
-          <Link to={`/locations/${this.props.location.number}`}><button>Reviews</button></Link>
+          <Link to={`/locations/${this.props.location.number}`}><button>Details</button></Link>
         </div>
         <br/>
       </div>

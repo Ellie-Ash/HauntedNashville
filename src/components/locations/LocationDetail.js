@@ -29,6 +29,8 @@ class LocationDetail extends Component {
             <p>{this.state.location}</p>
             <p>{this.state.marker_text}</p>
             <br/>
+            <button> Save </button>
+            <br/>
             <LocationReviewModal  />
         </div>
       </div>

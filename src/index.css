@@ -60,9 +60,15 @@ body {
   justify-content: space-evenly;
 }
 
+textarea {
+  width: 100%;
+  min-height: 6em;
+  border-style: none;
+}
 input {
-  width: 98%;
-  margin: 4px;
+  width: 100%;
+  margin-bottom: 4px;
+  border-style: none;
 }
 
 ul {
@@ -75,6 +81,10 @@ li {
 
 p {
   font-size: 18px;
+}
+
+i {
+  padding: 2px;
 }
 
 a {
@@ -101,7 +111,16 @@ button {
   background-color: rgb(16, 19, 19);
   color: rgb(254, 229, 86);
   max-height: 3em;
-  max-width: 5em;
+  width: 5em;
+  text-align: center;
+}
+
+.close {
+  width: 2em;
+}
+.close:hover {
+  background-color: rgb(237, 235, 235);
+  color: rgb(16, 19, 19);
 }
 
 button:hover {
