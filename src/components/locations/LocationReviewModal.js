@@ -33,7 +33,12 @@ class LocationReviewModal extends React.Component {
         const stateToChange = {};
         stateToChange[event.target.id] = event.target.value;
         this.setState(stateToChange);
+    }
 
+    handleRatingChange = event => {
+        const stateToChange = {};
+        stateToChange[event.target.name] = event.target.value;
+        this.setState(stateToChange);
     }
 
     toggle() {
@@ -41,7 +46,6 @@ class LocationReviewModal extends React.Component {
             modal: !prevState.modal
         }));
     }
-
 
     handleReview = event => {
         event.preventDefault();
@@ -52,13 +56,13 @@ class LocationReviewModal extends React.Component {
         this.setState({ loadingStatus: true });
         const newReview = {
             userId: parseInt(sessionStorage.getItem("credentials")),
-            locationId: this.state.locationId,
+            locationId: parseInt(this.props.locationId),
             ratingTitle: this.state.ratingTitle,
             review: this.state.review,
-            rating: this.state.rating,
+            rating: parseInt(this.state.rating),
         }
         DataManager.postReview(newReview)
-            // .then(() => this.props.history.push(`/home`))
+            // .then(() => this.props.history.push(`/locations/${this.state.locationId}`))
             console.log("what")
         }
     }
@@ -80,11 +84,12 @@ class LocationReviewModal extends React.Component {
                                     required
                                 /><br/>
                                 <Rating
+                                name="rating"
+                                id="rating"
                                 emptySymbol={<span style={{ color: 'gray' }}><i className="fas fa-ghost fa-2x"></i></span>}
                                 fullSymbol={<span style={{ color: 'black' }}><i className="fas fa-ghost fa-2x"></i></span>}
-                                id="rating"
-                                {...this.handleFieldChange}
-                                required
+                                onChange={this.handleRatingChange} 
+                                value={this.state.review.rating} 
                                 />
                             </div>
                         </fieldset>

@@ -11,16 +11,22 @@
       "username": "1",
       "password": "1",
       "id": 2
+    },
+    {
+      "email": "ee",
+      "username": "ee",
+      "password": "e",
+      "id": 3
     }
   ],
   "reviews": [
     {
-      "userId": 2,
-      "locationId": "",
+      "userId": 3,
+      "locationId": 72,
       "ratingTitle": "I almost died",
-      "review": "This place is so haunted wow",
-      "rating": "",
-      "id": 1
+      "review": "This place is very very very haunted",
+      "rating": null,
+      "id": 2
     }
   ]
 }

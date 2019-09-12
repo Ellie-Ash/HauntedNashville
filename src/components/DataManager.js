@@ -21,7 +21,8 @@ export default {
 
     //REVIEWS 
     getAllReviews() {
-        return fetch(`${remoteURL}/reviews`).then(result => result.json())
+        return fetch(`${remoteURL}/reviews`)
+        .then(result => result.json())
     },
     postReview(newReview) {
         return fetch(`${remoteURL}/reviews`, {
@@ -30,7 +31,8 @@ export default {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(newReview)
-        }).then(data => data.json())
+        })
+        .then(data => data.json())
     },
 
 

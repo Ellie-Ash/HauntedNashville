@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-//import the components we will need
 import LocationCard from './LocationCard'
 import DataManager from '../DataManager'
 
