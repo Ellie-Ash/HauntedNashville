@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import DataManager from '../DataManager';
+import DataManager from '../DataManager'
 import Rating from 'react-rating'
 
-class LocationReviewModal extends React.Component {
+class EditReviewModal extends Component {
+    state = {
+        reviews: [],
+        locationId: "",
+        userId: "",
+        ratingTitle: "",
+        review: "",
+        rating: 0,
+        loadingStatus: false,
+    };
+
     constructor(props) {
         super(props);
         this.state = {
@@ -17,28 +27,6 @@ class LocationReviewModal extends React.Component {
             modal: false
         };
         this.toggle = this.toggle.bind(this);
-        this.handleRatingChange = this.handleRatingChange.bind(this)
-    }
-
-    componentDidMount() {
-        DataManager.getAllReviews()
-            .then(reviews => {
-                this.setState({
-                    reviews: reviews
-                })
-            })
-    }
-
-    handleFieldChange = event => {
-        const stateToChange = {};
-        stateToChange[event.target.id] = event.target.value;
-        this.setState(stateToChange);
-    }
-
-    handleRatingChange = event => {
-        const stateToChange = {};
-        stateToChange["rating"] = event;
-        this.setState(stateToChange);
     }
 
     toggle() {
@@ -47,37 +35,65 @@ class LocationReviewModal extends React.Component {
         }));
     }
 
-    handleReview = event => {
-        event.preventDefault();
-        if (this.state.review === "") {
-            alert("Please fill out all fields.")
-        }
-        else {
-        this.setState({ loadingStatus: true });
-        const newReview = {
-            userId: parseInt(sessionStorage.getItem("credentials")),
-            locationId: parseInt(this.props.locationId),
-            ratingTitle: this.state.ratingTitle,
-            review: this.state.review,
-            rating: parseInt(this.state.rating),
-        }
-        DataManager.postReview(newReview)
-            .then(() => {this.props.getReviews()})
-            .then(this.toggle)
-        }
+    handleFieldChange = evt => {
+        const stateToChange = {};
+        stateToChange[evt.target.id] = evt.target.value;
+        this.setState(stateToChange);
+    };
+
+    handleRatingChange = event => {
+        const stateToChange = {};
+        stateToChange["rating"] = event;
+        this.setState(stateToChange);
     }
-    
-    render() {
-        
-        return (
+
+    editExistingReview = event => {
+        event.preventDefault();
+        if (this.state.ratingTitle === ""||
+        this.state.review === "") {
+            alert("Please fill out all fields.");
+        } else {
+            this.setState({ loadingStatus: true });
+            const editedReview = {
+                userId: parseInt(sessionStorage.getItem("credentials")),
+                locationId: parseInt(this.props.locationId),
+                ratingTitle: this.state.ratingTitle,
+                review: this.state.review,
+                rating: parseInt(this.state.rating),
+            };
+            this.props.postEditedReview(editedReview)
+            .then(this.toggle)
+    }
+};
+
+    componentDidMount() {
+        DataManager.getReview(this.props.review.id)
+        .then(review => {
+            this.setState({
+            ratingTitle: review.ratingTitle,
+            review: review.review,
+            rating: review.rating,
+            loadingStatus: false,
+            });
+        });
+    }
+
+    render(){
+        return(
+            <>
+            <section className="eventSectionContent">
+            <button
+            onClick={this.toggle}>
+            Edit
+            </button>
+            </section>
             <div>
-                <button className="reviewBtn" onClick={this.toggle}>Review</button>
-                <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+            <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>Review</ModalHeader>
                     <ModalBody>
                     <form>
                         <fieldset>
-                            <div className="reviewModalForm">
+                            <div className="editReviewModal">
                                 <input onChange={this.handleFieldChange} type="text" id="ratingTitle" placeholder="Title" required></input>
                                 <textarea onChange={this.handleFieldChange}
                                     id="review"
@@ -97,13 +113,14 @@ class LocationReviewModal extends React.Component {
                     </form>
                     </ModalBody>
                     <ModalFooter>
-                        <button onClick={this.handleReview}>Save</button>{' '}
+                        <button onClick={this.editExistingReview}>Save</button>{' '}
                         <button onClick={this.toggle}>Cancel</button>
                     </ModalFooter>
                 </Modal>
-            </div>
-        );
+        </div>
+        </>
+        )
     }
 }
 
-export default LocationReviewModal;
+export default EditReviewModal

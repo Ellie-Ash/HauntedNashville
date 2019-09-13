@@ -22,27 +22,11 @@
   "reviews": [
     {
       "userId": 3,
-      "locationId": 72,
-      "ratingTitle": "I almost died",
-      "review": "This place is very very very haunted",
-      "rating": 5,
-      "id": 2
-    },
-    {
-      "userId": 3,
       "locationId": 94,
-      "ratingTitle": "Very Haunted!!",
-      "review": "WOW!!",
-      "rating": 5,
-      "id": 3
-    },
-    {
-      "userId": 3,
-      "locationId": 94,
-      "ratingTitle": "Not that haunted..",
-      "review": "disappointed",
+      "ratingTitle": "1",
+      "review": "1",
       "rating": 1,
-      "id": 4
+      "id": 1
     }
   ]
 }

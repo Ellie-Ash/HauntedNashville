@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import Rating from 'react-rating'
-
+import DataManager from '../DataManager'
+import EventEditModal from './EditReviewModal'
 class LocationReviewCard extends Component {
+
 render(){
     return(
         <div className="reviewCard">
@@ -17,10 +19,17 @@ render(){
             fullSymbol={<span style={{ color: 'black' }}><i className="fas fa-ghost"></i></span>}
             />
             <p>username</p>
-          <h4>{this.props.review.ratingTitle}</h4>
+          <p>{this.props.review.ratingTitle}</p>
           <p>{this.props.review.review}</p>
-          <button> Delete </button>
-          <button> Edit </button>
+          <div className="reviewBtnContainer">
+          <button onClick={() => DataManager.deleteReview(this.props.review.id)
+            .then(() => {this.props.getReviews()})}> 
+            Delete </button>
+            <EventEditModal 
+            {...this.props}
+            postEditedEvent={this.props.postEditedEvent}
+          />
+          </div>
         </div>
         <br/>
         </div>

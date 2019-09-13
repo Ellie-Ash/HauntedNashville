@@ -34,6 +34,18 @@ class LocationDetail extends Component {
   })
 }
 
+postEditedReview = (id) => {
+    return DataManager.editReview(id)
+    .then(() => {
+      DataManager.getAllReviews()
+      .then((reviews) => {
+        this.setState({
+            reviews: reviews,
+        })
+      })
+    })
+  }
+
   render() {
       console.log(this.props.locationId)
     return (
@@ -54,6 +66,8 @@ class LocationDetail extends Component {
             {this.state.reviews.map(review => 
             <LocationReviewCard 
             review={review}
+            getReviews={this.getReviews}
+            postEditedReview={this.postEditedReview}
             />)}
         </div>
         </div>

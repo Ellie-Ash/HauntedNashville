@@ -65,6 +65,11 @@ body {
   display: flex;
 }
 
+.reviewBtnContainer {
+  display: flex;
+  width: 50%;
+}
+
 .spookyLocationIcon {
   width: 25%;
   height: 25%;
@@ -141,12 +146,13 @@ a:hover {
 
 button {
   border-radius: 0.4em;
-  border-color: rgb(254, 229, 86);
-  background-color: rgb(254, 229, 86);
+  border-color: rgb(255, 199, 57);
+  background-color: rgb(249, 194, 57);
   color: black;
   max-height: 3em;
   width: 5em;
   text-align: center;
+  margin-right: 1em;
 }
 
 .loginRegisterBtnContainer {

@@ -24,6 +24,10 @@ export default {
         return fetch(`${remoteURL}/reviews`)
         .then(result => result.json())
     },
+    getReview(id) {
+        return fetch(`${remoteURL}/reviews/${id}`)
+            .then(response => response.json());
+    },
     postReview(newReview) {
         return fetch(`${remoteURL}/reviews`, {
             method: "POST",
@@ -33,6 +37,20 @@ export default {
             body: JSON.stringify(newReview)
         })
         .then(data => data.json())
+    },
+    deleteReview(id) {
+        return fetch(`${remoteURL}/reviews/${id}`,
+        {method: "DELETE"
+        }).then(response => response.json())
+    },
+    editReview(editedReview) {
+        return fetch (`${remoteURL}/reviews/${editedReview.id}`,  {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(editedReview)
+        }).then(response => response.json());
     },
 
 
