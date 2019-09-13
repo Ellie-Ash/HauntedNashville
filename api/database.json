@@ -30,67 +30,19 @@
     },
     {
       "userId": 3,
-      "locationId": 105,
-      "ratingTitle": "t",
-      "review": "t",
-      "rating": 4,
+      "locationId": 94,
+      "ratingTitle": "Very Haunted!!",
+      "review": "WOW!!",
+      "rating": 5,
       "id": 3
     },
     {
       "userId": 3,
-      "locationId": 126,
-      "ratingTitle": "g",
-      "review": "g",
+      "locationId": 94,
+      "ratingTitle": "Not that haunted..",
+      "review": "disappointed",
       "rating": 1,
       "id": 4
-    },
-    {
-      "userId": 3,
-      "locationId": 145,
-      "ratingTitle": "h",
-      "review": "h",
-      "rating": 4,
-      "id": 5
-    },
-    {
-      "userId": 3,
-      "locationId": 129,
-      "ratingTitle": "f",
-      "review": "f",
-      "rating": 4,
-      "id": 6
-    },
-    {
-      "userId": 3,
-      "locationId": 14,
-      "ratingTitle": "ff",
-      "review": "ff",
-      "rating": 4,
-      "id": 7
-    },
-    {
-      "userId": 3,
-      "locationId": 94,
-      "ratingTitle": "d",
-      "review": "d",
-      "rating": 4,
-      "id": 8
-    },
-    {
-      "userId": 3,
-      "locationId": 94,
-      "ratingTitle": "f",
-      "review": "f",
-      "rating": 5,
-      "id": 9
-    },
-    {
-      "userId": 3,
-      "locationId": 115,
-      "ratingTitle": "d",
-      "review": "d",
-      "rating": 4,
-      "id": 10
     }
   ]
 }
