@@ -12,12 +12,12 @@ class LocationReviewModal extends React.Component {
             userId: "",
             ratingTitle: "",
             review: "",
-            rating: "",
+            rating: 0,
             loadingStatus: false,
             modal: false
         };
-
         this.toggle = this.toggle.bind(this);
+        this.handleRatingChange = this.handleRatingChange.bind(this)
     }
 
     componentDidMount() {
@@ -37,7 +37,7 @@ class LocationReviewModal extends React.Component {
 
     handleRatingChange = event => {
         const stateToChange = {};
-        stateToChange[event.target.name] = event.target.value;
+        stateToChange["rating"] = event;
         this.setState(stateToChange);
     }
 
@@ -62,12 +62,12 @@ class LocationReviewModal extends React.Component {
             rating: parseInt(this.state.rating),
         }
         DataManager.postReview(newReview)
-            // .then(() => this.props.history.push(`/locations/${this.state.locationId}`))
-            console.log("what")
+            .then(() => {this.props.getReviews()})
         }
     }
     
     render() {
+        
         return (
             <div>
                 <button className="reviewBtn" onClick={this.toggle}>Review</button>
@@ -86,11 +86,10 @@ class LocationReviewModal extends React.Component {
                                 <Rating
                                 name="rating"
                                 id="rating"
-                                initialRating="0"
+                                initialRating={this.state.rating}
                                 emptySymbol={<span style={{ color: 'gray' }}><i className="fas fa-ghost fa-2x"></i></span>}
                                 fullSymbol={<span style={{ color: 'black' }}><i className="fas fa-ghost fa-2x"></i></span>}
-                                onChange={this.handleRatingChange} 
-                                value={this.state.review.rating} 
+                                onClick={this.handleRatingChange} 
                                 />
                             </div>
                         </fieldset>

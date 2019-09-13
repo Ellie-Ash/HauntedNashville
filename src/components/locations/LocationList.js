@@ -19,7 +19,8 @@ componentDidMount(){
 render(){
     return(
         <div className="locationCardContainer">
-            {this.state.locations.map(location => <LocationCard 
+            {this.state.locations.map((location, i) => <LocationCard 
+            key={i}
             location={location}
             />)}
         </div>
