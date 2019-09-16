@@ -51,7 +51,7 @@ class EditReviewModal extends Component {
         event.preventDefault();
             this.setState({ loadingStatus: true });
             const editedReview = {
-                id: this.props.match.params.reviewId,
+                id: this.props.review.id,
                 userId: parseInt(sessionStorage.getItem("credentials")),
                 locationId: parseInt(this.props.locationId),
                 ratingTitle: this.state.ratingTitle,
@@ -59,6 +59,7 @@ class EditReviewModal extends Component {
                 rating: parseInt(this.state.rating)
             };
             DataManager.editReview(editedReview)
+            .then(() => {this.props.getReviews()})
             .then(this.toggle)
     };
 
@@ -66,12 +67,12 @@ class EditReviewModal extends Component {
         DataManager.getReview(this.props.review.id)
         .then(review => {
             this.setState({
-            userId: review.userId,
-            locationId: review.locationId,
-            ratingTitle: review.ratingTitle,
-            review: review.review,
-            rating: review.rating,
-            loadingStatus: false,
+                userId: review.userId,
+                locationId: review.locationId,
+                ratingTitle: review.ratingTitle,
+                review: review.review,
+                rating: review.rating,
+                loadingStatus: false,
             });
         });
     }

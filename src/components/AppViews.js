@@ -30,9 +30,11 @@ export default class AppViews extends Component {
               return <AuthMain {...props} />
           }}
         />
+
         <Route exact path="/locations/:locationId(\d+)" render={props => {
             if (this.isAuthenticated()) {
-                return <LocationDetail locationId={parseInt(props.match.params.locationId)}/>
+                return <LocationDetail locationId={parseInt(props.match.params.locationId)}
+                {...props}/>
                   
             }
                 return <AuthMain {...props} />

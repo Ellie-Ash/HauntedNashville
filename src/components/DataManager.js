@@ -64,10 +64,29 @@ export default {
         .then(response => response.json());
     },
 
+    // SAVED LOCATIONS 
+    getAllSavedLocations() {
+        return fetch(`${remoteURL}/savedLocations`)
+            .then(response => response.json())
+    },
+    saveLocation(saved) {
+        return fetch(`${remoteURL}/savedLocations`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(saved)
+        })
+        .then(data => data.json())
+    },
 
     // USERS
     getAllUsers() {
         return fetch(`${remoteURL}/users`)
+            .then(response => response.json());
+    },
+    getUser(id) {
+        return fetch(`${remoteURL}/users/${id}`)
             .then(response => response.json());
     },
     checkUsers(email, password) {

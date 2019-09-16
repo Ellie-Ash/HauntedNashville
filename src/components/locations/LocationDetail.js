@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DataManager from '../DataManager';
 import LocationReviewModal from './LocationReviewModal';
 import LocationReviewCard from './LocationReviewCard'
+import SaveLocation from '../saved/SaveLocation'
 
 class LocationDetail extends Component {
 
@@ -34,9 +35,6 @@ getReviews = () => {
   })
 }
 
-// postEditedReview = () => {
-//     DataManager.editReview(this.props.reviewId)
-// }
 
   render() {
     return (
@@ -48,10 +46,18 @@ getReviews = () => {
             <p>{this.state.marker_text}</p>
             <br/>
             <br/>
+
+            <div className="saveAndReviewBtns">
+            <SaveLocation
+            locationId={this.props.locationId}
+            />
+
             <LocationReviewModal  
             locationId={this.props.locationId}
             getReviews={this.getReviews}
             />
+            </div>
+
             <div className="reviewCardContainer">
             {this.state.reviews.map((review, i) => 
             <LocationReviewCard 
@@ -59,7 +65,7 @@ getReviews = () => {
             locationId={this.props.locationId}
             review={review}
             getReviews={this.getReviews}
-            // postEditedReview={this.postEditedReview}
+            {...this.props}
             />)}
         </div>
         </div>

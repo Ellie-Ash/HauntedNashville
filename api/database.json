@@ -1,32 +1,26 @@
 {
-  "users": [
+  "users": [],
+  "reviews": [],
+  "savedLocations": [
     {
-      "id": 1,
-      "username": "e",
-      "email": "e@e.com",
-      "password": 1234
+      "userId": 4,
+      "locationId": 94,
+      "id": 1
     },
     {
-      "email": "1",
-      "username": "1",
-      "password": "1",
+      "userId": 4,
+      "locationId": 94,
       "id": 2
     },
     {
-      "email": "ee",
-      "username": "ee",
-      "password": "e",
+      "userId": 4,
+      "locationId": 94,
       "id": 3
-    }
-  ],
-  "reviews": [
+    },
     {
-      "userId": 2,
-      "locationId": 115,
-      "ratingTitle": "1",
-      "review": "1",
-      "rating": 5,
-      "id": 1
+      "userId": 4,
+      "locationId": 94,
+      "id": 4
     }
   ]
 }
