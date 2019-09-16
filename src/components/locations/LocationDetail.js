@@ -12,7 +12,7 @@ class LocationDetail extends Component {
       marker_text: ""
   }
 
-  componentDidMount(){
+componentDidMount(){
     DataManager.getLocation(this.props.locationId)
     .then((location) => {
       this.setState({
@@ -24,7 +24,7 @@ class LocationDetail extends Component {
     this.getReviews()
   }
 
-  getReviews = () => {
+getReviews = () => {
       DataManager.getAllReviews()
         .then((reviews) => {
         const filteredReviews = reviews.filter(review => review.locationId === this.props.locationId)
@@ -34,20 +34,11 @@ class LocationDetail extends Component {
   })
 }
 
-postEditedReview = (id) => {
-    return DataManager.editReview(id)
-    .then(() => {
-      DataManager.getAllReviews()
-      .then((reviews) => {
-        this.setState({
-            reviews: reviews,
-        })
-      })
-    })
-  }
+// postEditedReview = () => {
+//     DataManager.editReview(this.props.reviewId)
+// }
 
   render() {
-      console.log(this.props.locationId)
     return (
       <div className="locationDetailContainer">
         <div className="locationDetailContent">
@@ -56,18 +47,19 @@ postEditedReview = (id) => {
             <br />
             <p>{this.state.marker_text}</p>
             <br/>
-            <button> Save </button>
             <br/>
             <LocationReviewModal  
             locationId={this.props.locationId}
             getReviews={this.getReviews}
             />
             <div className="reviewCardContainer">
-            {this.state.reviews.map(review => 
+            {this.state.reviews.map((review, i) => 
             <LocationReviewCard 
+            key={i}
+            locationId={this.props.locationId}
             review={review}
             getReviews={this.getReviews}
-            postEditedReview={this.postEditedReview}
+            // postEditedReview={this.postEditedReview}
             />)}
         </div>
         </div>

@@ -6,7 +6,6 @@ export default {
         return fetch(`https://data.nashville.gov/resource/vk65-u7my.json`)
             .then(response  => response.json())
             .then(result => {
-                    console.log(result, "all from fetch")
                     return result
             })
     },
@@ -17,6 +16,16 @@ export default {
             console.log(response, "in fetch")
             return response[0]
         })
+    },
+    postLocation(locationObject) {
+        return fetch(`https://data.nashville.gov/resource/vk65-u7my.json`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(locationObject)
+        })
+        .then(response => response.json())
     },
 
     //REVIEWS 
@@ -41,7 +50,8 @@ export default {
     deleteReview(id) {
         return fetch(`${remoteURL}/reviews/${id}`,
         {method: "DELETE"
-        }).then(response => response.json())
+        })
+        .then(response => response.json())
     },
     editReview(editedReview) {
         return fetch (`${remoteURL}/reviews/${editedReview.id}`,  {
@@ -50,7 +60,8 @@ export default {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(editedReview)
-        }).then(response => response.json());
+        })
+        .then(response => response.json());
     },
 
 

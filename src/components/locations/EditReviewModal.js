@@ -49,27 +49,25 @@ class EditReviewModal extends Component {
 
     editExistingReview = event => {
         event.preventDefault();
-        if (this.state.ratingTitle === ""||
-        this.state.review === "") {
-            alert("Please fill out all fields.");
-        } else {
             this.setState({ loadingStatus: true });
             const editedReview = {
+                id: this.props.match.params.reviewId,
                 userId: parseInt(sessionStorage.getItem("credentials")),
                 locationId: parseInt(this.props.locationId),
                 ratingTitle: this.state.ratingTitle,
                 review: this.state.review,
-                rating: parseInt(this.state.rating),
+                rating: parseInt(this.state.rating)
             };
-            this.props.postEditedReview(editedReview)
+            DataManager.editReview(editedReview)
             .then(this.toggle)
-    }
-};
+    };
 
     componentDidMount() {
         DataManager.getReview(this.props.review.id)
         .then(review => {
             this.setState({
+            userId: review.userId,
+            locationId: review.locationId,
             ratingTitle: review.ratingTitle,
             review: review.review,
             rating: review.rating,
@@ -81,7 +79,7 @@ class EditReviewModal extends Component {
     render(){
         return(
             <>
-            <section className="eventSectionContent">
+            <section className="editBtnContainer">
             <button
             onClick={this.toggle}>
             Edit
@@ -94,11 +92,13 @@ class EditReviewModal extends Component {
                     <form>
                         <fieldset>
                             <div className="editReviewModal">
-                                <input onChange={this.handleFieldChange} type="text" id="ratingTitle" placeholder="Title" required></input>
+                                <input onChange={this.handleFieldChange} type="text" id="ratingTitle" placeholder="Title" required
+                                value={this.state.ratingTitle}></input>
                                 <textarea onChange={this.handleFieldChange}
-                                    id="review"
-                                    placeholder="Review"
-                                    required
+                                value={this.state.review}
+                                id="review"
+                                placeholder="Review"
+                                required
                                 /><br/>
                                 <Rating
                                 name="rating"
@@ -113,7 +113,7 @@ class EditReviewModal extends Component {
                     </form>
                     </ModalBody>
                     <ModalFooter>
-                        <button onClick={this.editExistingReview}>Save</button>{' '}
+                        <button onClick={this.editExistingReview}> Save </button>
                         <button onClick={this.toggle}>Cancel</button>
                     </ModalFooter>
                 </Modal>

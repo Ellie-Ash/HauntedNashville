@@ -21,11 +21,11 @@
   ],
   "reviews": [
     {
-      "userId": 3,
-      "locationId": 94,
+      "userId": 2,
+      "locationId": 115,
       "ratingTitle": "1",
       "review": "1",
-      "rating": 1,
+      "rating": 5,
       "id": 1
     }
   ]

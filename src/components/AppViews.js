@@ -48,6 +48,7 @@ export default class AppViews extends Component {
             return <AuthMain {...props} />;
           }}
         />
+
       </React.Fragment>
     );
   }
