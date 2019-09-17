@@ -67,7 +67,11 @@ export default {
     // SAVED LOCATIONS 
     getAllSavedLocations() {
         return fetch(`${remoteURL}/savedLocations`)
-            .then(response => response.json())
+        .then(result => result.json())
+        .then(response => {
+            console.log(response, "saved fetch")
+            return response
+        })   
     },
     saveLocation(saved) {
         return fetch(`${remoteURL}/savedLocations`, {

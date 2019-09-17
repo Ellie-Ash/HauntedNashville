@@ -58,6 +58,9 @@ getReviews = () => {
             />
             </div>
 
+            <div className="divider"><img src="https://i.pinimg.com/originals/a6/36/fc/a636fc44b6502370617271d3088acd02.png" alt="..." className="dividerImg"></img> 
+            </div>
+
             <div className="reviewCardContainer">
             {this.state.reviews.map((review, i) => 
             <LocationReviewCard 

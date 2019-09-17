@@ -2,7 +2,7 @@ import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import AuthMain from './auth/AuthMain'
 import LocationMain from './locations/LocationMain'
-import SavedLocation from './saved/SavedLocation'
+import SavedLocationMain from './saved/SavedLocationMain'
 import LocationDetail from './locations/LocationDetail'
 
 export default class AppViews extends Component {
@@ -45,7 +45,7 @@ export default class AppViews extends Component {
           exact path="/my-locations"
           render={props => {
             if (this.isAuthenticated()) {
-              return <SavedLocation {...props} />;
+              return <SavedLocationMain {...props} />;
             }
             return <AuthMain {...props} />;
           }}

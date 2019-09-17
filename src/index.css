@@ -1,5 +1,5 @@
 body {
-  background: url("https://images.unsplash.com/photo-1485236715568-ddc5ee6ca227?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80") no-repeat center center fixed;
+  background: url("http://www.catholiclane.com/wp-content/uploads/fog.jpg") no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
   font-family: 'Roboto Condensed', sans-serif;
@@ -17,7 +17,7 @@ body {
   display: flex;
   background-color: whitesmoke;
   border-radius: 4px;
-  /* opacity: 0.8; */
+  opacity: 0.75;
   flex-wrap: wrap;
   max-width: 20em;
   min-width: 20em;
@@ -38,27 +38,28 @@ body {
 .locationDetailContent {
   display: flex;
   flex-wrap: wrap;
-  min-width: 40em;
-  min-height: 20em;
   padding: 1.5em;
   justify-content: space-evenly;
   flex-direction: column;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  opacity: 0.8;
 }
 
 .locationReviewCardContent {
   display: flex;
-  background-color: whitesmoke;
+  justify-content: space-evenly;
+  /* background-color: whitesmoke;
   border-radius: 4px;
-  /* opacity: 0.8; */
+  opacity: 0.8; */
   flex-wrap: wrap;
-  padding: 1.5em;
-  align-items: flex-start;
+  /* padding: 1.5em; */
   flex-direction: column;
 }
 
-.reviewCardContainer {
+/* .reviewCardContainer {
   padding-top: 3em;
-}
+} */
 
 .saveAndReviewBtns {
   display: flex;
@@ -67,6 +68,7 @@ body {
 .reviewBtnContainer {
   display: flex;
   width: 50%;
+  padding-top: 1.5em;
 }
 
 .spookyLocationIcon {
@@ -74,10 +76,11 @@ body {
   height: 25%;
   display: flex;
   /* background-color: rgb(137, 103, 143); */
-  background-color: rgb(159, 215, 235);
+  background-color: rgb(152, 133, 182);
   /* box-shadow: 0px 0px 8px rgb(147, 201, 221); */
   border-radius: 100%;
   padding: 4px;
+  opacity: 1;
 }
 
 /* .fa-skull {
@@ -145,7 +148,7 @@ a:hover {
 
 button {
   border-radius: 0.4em;
-  border-color: rgb(255, 199, 57);
+  border-color: rgb(249, 194, 57);
   background-color: rgb(249, 194, 57);
   color: black;
   max-height: 3em;
@@ -157,6 +160,17 @@ button {
 .loginRegisterBtnContainer {
   display: flex;
   justify-content: space-evenly;
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+}
+
+.dividerImg {
+  min-width: 15em;
+  max-width: 20em;
+  max-height: 5em;
 }
 
 .close {

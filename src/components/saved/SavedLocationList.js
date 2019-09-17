@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SavedLocationCard from './LocationCard'
+import SavedLocationCard from './SavedLocationCard'
 import DataManager from '../DataManager'
 
 class SavedLocationList extends Component {
@@ -9,19 +9,21 @@ class SavedLocationList extends Component {
 
 componentDidMount(){
     DataManager.getAllSavedLocations()
-    .then((saved) => {
+    .then((savedLocations) => {
         this.setState({
-            saved: saved
+            savedLocations: savedLocations
         })
+        console.log("in CDM", savedLocations)
     })
 }
 
 render(){
+    console.log(this.state)
     return(
         <div className="locationCardContainer">
-            {this.state.savedLocations.map((location, i) => <SavedLocationCard 
+            {this.state.savedLocations.map((savedLocation, i) => <SavedLocationCard 
             key={i}
-            location={location}
+            savedLocation={savedLocation}
             />)}
         </div>
     )
