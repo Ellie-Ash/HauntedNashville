@@ -11,17 +11,55 @@
       "username": "2",
       "password": "2",
       "id": 2
+    },
+    {
+      "email": "t",
+      "username": "t",
+      "password": "t",
+      "id": 3
     }
   ],
   "reviews": [
     {
+      "id": 1,
+      "userId": 1,
+      "locationId": 94,
+      "ratingTitle": "im 1",
+      "review": "im only a 1....",
+      "rating": 1
+    },
+    {
+      "userId": 1,
+      "locationId": 94,
+      "ratingTitle": "im still one",
+      "review": "one",
+      "rating": 5,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "locationId": 115,
+      "ratingTitle": "hi im one",
+      "review": "one",
+      "rating": 1,
+      "id": 3
+    },
+    {
+      "id": 4,
       "userId": 2,
       "locationId": 94,
-      "ratingTitle": "e",
-      "review": "e",
-      "rating": 3,
-      "id": 1
+      "ratingTitle": "im 22222222",
+      "review": "22222",
+      "rating": 2
     }
   ],
-  "savedLocations": []
+  "savedLocations": [
+    {
+      "userId": 2,
+      "locationId": 55,
+      "title": "WOODBINE",
+      "location": "Nolensville Road, between Joyner Avenue and Whitsett Road (across the street from Woodbine Methodist Church)",
+      "id": 4
+    }
+  ]
 }

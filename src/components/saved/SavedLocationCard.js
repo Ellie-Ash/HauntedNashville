@@ -7,8 +7,11 @@ class SavedLocationCard extends Component {
         location: {},
     }
   render() {
+    const activeUser = parseInt(sessionStorage.getItem("credentials"))
+    const checkUser = this.props.savedLocation.userId === activeUser
     return (
-        <div className="locationCard">
+      <>
+        {checkUser ? 
         <div className="locationCardContent">
             <img src={require('../icons/castle.svg')} alt="Spooky Location" className="spookyLocationIcon"/>
           <h4>{this.props.savedLocation.title}</h4>
@@ -20,10 +23,8 @@ class SavedLocationCard extends Component {
             Delete </button>
 
           <Link to={`/locations/${this.props.savedLocation.locationId}`}><button >Details</button></Link>
-
-        </div>
-        <br/>
-      </div>
+      </div> :  null}
+      </>
     );
   }
 }
