@@ -13,17 +13,22 @@ componentDidMount(){
         this.setState({
             savedLocations: savedLocations
         })
-        console.log("in CDM", savedLocations)
     })
 }
 
+getSavedLocations(){
+    DataManager.getAllSavedLocations()
+}
+
+
 render(){
-    console.log(this.state)
     return(
         <div className="locationCardContainer">
             {this.state.savedLocations.map((savedLocation, i) => <SavedLocationCard 
             key={i}
             savedLocation={savedLocation}
+            getAllSavedLocations={this.getAllSavedLocations}
+            {...this.props}
             />)}
         </div>
     )

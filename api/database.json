@@ -12,7 +12,12 @@
     {
       "userId": 1,
       "locationId": 94,
-      "id": 1
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "locationId": 94,
+      "id": 4
     }
   ]
 }

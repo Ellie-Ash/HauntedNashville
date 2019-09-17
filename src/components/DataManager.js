@@ -83,6 +83,12 @@ export default {
         })
         .then(data => data.json())
     },
+    removeSavedLocation(id) {
+        return fetch(`${remoteURL}/savedLocations/${id}`,
+            {
+                method: "DELETE"
+            }).then(response => response.json());
+    },
 
     // USERS
     getAllUsers() {
