@@ -3,8 +3,12 @@ import SavedLocationCard from './SavedLocationCard'
 import DataManager from '../DataManager'
 
 class SavedLocationList extends Component {
-    state = {
-        savedLocations: [],
+    constructor(props) {
+        super(props);
+        this.state = {
+            savedLocations: [],
+        };
+        this.getSavedLocations = this.getSavedLocations.bind(this);
     }
 
 componentDidMount(){
@@ -13,11 +17,17 @@ componentDidMount(){
         this.setState({
             savedLocations: savedLocations
         })
+        console.log("saved", savedLocations)
     })
 }
 
 getSavedLocations(){
     DataManager.getAllSavedLocations()
+    .then((savedLocations) => {
+        this.setState({
+            savedLocations: savedLocations
+        })
+    })
 }
 
 
@@ -27,7 +37,7 @@ render(){
             {this.state.savedLocations.map((savedLocation, i) => <SavedLocationCard 
             key={i}
             savedLocation={savedLocation}
-            getAllSavedLocations={this.getAllSavedLocations}
+            getSavedLocations={this.getSavedLocations}
             {...this.props}
             />)}
         </div>

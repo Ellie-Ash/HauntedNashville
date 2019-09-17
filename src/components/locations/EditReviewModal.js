@@ -4,16 +4,6 @@ import DataManager from '../DataManager'
 import Rating from 'react-rating'
 
 class EditReviewModal extends Component {
-    state = {
-        reviews: [],
-        locationId: "",
-        userId: "",
-        ratingTitle: "",
-        review: "",
-        rating: 0,
-        loadingStatus: false,
-    };
-
     constructor(props) {
         super(props);
         this.state = {
@@ -28,6 +18,8 @@ class EditReviewModal extends Component {
         };
         this.toggle = this.toggle.bind(this);
     }
+
+    activeUser = sessionStorage.getItem("credentials")
 
     toggle() {
         this.setState(prevState => ({

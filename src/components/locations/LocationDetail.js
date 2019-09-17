@@ -50,6 +50,8 @@ getReviews = () => {
             <div className="saveAndReviewBtns">
             <SaveLocation
             locationId={this.props.locationId}
+            title={this.state.title}
+            location={this.state.location}
             />
 
             <LocationReviewModal  

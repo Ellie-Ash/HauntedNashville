@@ -30,7 +30,7 @@ export default {
 
     //REVIEWS 
     getAllReviews() {
-        return fetch(`${remoteURL}/reviews`)
+        return fetch(`${remoteURL}/reviews?_sort=rating&_order=desc`)
         .then(result => result.json())
     },
     getReview(id) {

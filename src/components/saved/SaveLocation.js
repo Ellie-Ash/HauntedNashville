@@ -17,6 +17,9 @@ class SaveLocation extends Component {
         const saved = {
             userId: parseInt(sessionStorage.getItem("credentials")),
             locationId: parseInt(this.props.locationId),
+            title: this.props.title,
+            location: this.props.location
+
         }
         DataManager.saveLocation(saved)
         .then(alert("Saved!"))

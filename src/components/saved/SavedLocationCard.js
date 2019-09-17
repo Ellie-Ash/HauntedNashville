@@ -11,15 +11,15 @@ class SavedLocationCard extends Component {
         <div className="locationCard">
         <div className="locationCardContent">
             <img src={require('../icons/castle.svg')} alt="Spooky Location" className="spookyLocationIcon"/>
-          <h4>hi</h4>
-          <p>{this.props.savedLocation.locationId}</p>
+          <h4>{this.props.savedLocation.title}</h4>
+          <p>{this.props.savedLocation.location}</p>
 
           <button onClick={() => 
             DataManager.removeSavedLocation(this.props.savedLocation.id)
             .then(() => {this.props.getSavedLocations()})}> 
             Delete </button>
 
-          <Link to={`/locations/${this.props.savedLocation.locationId}`}><button>Details</button></Link>
+          <Link to={`/locations/${this.props.savedLocation.locationId}`}><button >Details</button></Link>
 
         </div>
         <br/>
