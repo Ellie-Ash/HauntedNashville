@@ -8,15 +8,19 @@ class NavBar extends Component {
 
     logout = () => {
         sessionStorage.clear()
+        this.props.triggerRender()
     }
-
+   
     render() {
+        const activeUser = parseInt(sessionStorage.getItem("credentials"))
+        console.log(activeUser)
+        const checkUser = isNaN(activeUser)
         return (
             <nav className="mainNav">
             <div className="divider"><img src="https://s-media-cache-ak0.pinimg.com/originals/d8/8d/b2/d88db24705469bee3122183d38192a4e.png" alt="..." className="dividerImg"></img> 
             </div>
             <h1 className="mainHeader"> HAUNTED NASHVILLE </h1>
-                <ul className="navBar">
+            {checkUser ? null : <ul className="navBar">
                     <li className="navItem">
                         <Link className="navLink" to="/home">Home</Link>
                     </li>
@@ -26,7 +30,8 @@ class NavBar extends Component {
                     <li className="navItem">
                         <Link onClick={this.logout} className="navLink" to="/">Logout</Link>
                     </li>
-                </ul>
+                </ul> }
+                
 
                     <div className="divider"><img src="https://s-media-cache-ak0.pinimg.com/originals/d8/8d/b2/d88db24705469bee3122183d38192a4e.png" alt="..." className="dividerImg"></img> 
             </div>

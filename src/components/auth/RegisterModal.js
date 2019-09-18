@@ -58,6 +58,7 @@ class RegisterModal extends React.Component {
         }
         DataManager.postUser(newUserObject)
             .then(newRegisteredUser => sessionStorage.setItem("credentials", newRegisteredUser.id))
+            .then(this.props.triggerRender)
             .then(() => this.props.history.push("/home"))
         }
     }

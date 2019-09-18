@@ -13,7 +13,7 @@ class AuthMain extends Component {
             </div> */}
             <br/>
                 <div className="loginRegisterBtnContainer">
-                <LoginModal {...this.props}/>
+                <LoginModal {...this.props} />
                 <RegisterModal {...this.props}/>
                 </div>
                 </div>

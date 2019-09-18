@@ -17,7 +17,8 @@ export default class AppViews extends Component {
           exact
           path="/"
           render={props => {
-            return <AuthMain {...props} />;
+            return <AuthMain {...props} 
+            triggerRender={this.props.triggerRender}/>;
           }}
         />
 

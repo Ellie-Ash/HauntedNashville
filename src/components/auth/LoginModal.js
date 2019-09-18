@@ -40,6 +40,7 @@ class LoginModal extends Component {
             .then(checkedUsers => {
                 if (checkedUsers.length > 0) {
                     sessionStorage.setItem("credentials", checkedUsers[0].id)
+                    this.props.triggerRender()
                     this.props.history.push("/home");
                 } else {
                     alert("Invalid username or password.")
