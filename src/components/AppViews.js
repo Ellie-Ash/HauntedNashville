@@ -1,4 +1,4 @@
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import React, { Component } from "react";
 import AuthMain from './auth/AuthMain'
 import LocationMain from './locations/LocationMain'
@@ -27,7 +27,7 @@ export default class AppViews extends Component {
               return <LocationMain {...props} />
               
             }
-              return <AuthMain {...props} />
+              return <Redirect to="/" />
           }}
         />
 
@@ -37,7 +37,7 @@ export default class AppViews extends Component {
                 {...props}/>
                   
             }
-                return <AuthMain {...props} />
+                return <Redirect to="/" />
             }}
         />
 
@@ -47,7 +47,7 @@ export default class AppViews extends Component {
             if (this.isAuthenticated()) {
               return <SavedLocationMain {...props} />;
             }
-            return <AuthMain {...props} />;
+            return <Redirect to="/" />
           }}
         />
 

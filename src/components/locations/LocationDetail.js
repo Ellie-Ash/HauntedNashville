@@ -48,20 +48,21 @@ getReviews = () => {
             <br/>
 
             <div className="saveAndReviewBtns">
+            <LocationReviewModal  
+            locationId={this.props.locationId}
+            getReviews={this.getReviews}
+            />
+
             <SaveLocation
             locationId={this.props.locationId}
             title={this.state.title}
             location={this.state.location}
             />
 
-            <LocationReviewModal  
-            locationId={this.props.locationId}
-            getReviews={this.getReviews}
-            />
             </div>
-
-            <div className="divider"><img src="https://i.pinimg.com/originals/a6/36/fc/a636fc44b6502370617271d3088acd02.png" alt="..." className="dividerImg"></img> 
-            </div>
+            
+            {/* <div className="divider"><img src="https://wiki.ffxiv-roleplayers.com/images/f/fa/Albauntdivide.png" alt="..." className="dividerImg"></img> 
+            </div> */}
 
             <div className="reviewCardContainer">
             {this.state.reviews.map((review, i) => 

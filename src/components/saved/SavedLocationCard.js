@@ -12,17 +12,23 @@ class SavedLocationCard extends Component {
     return (
       <>
         {checkUser ? 
-        <div className="locationCardContent">
-            <img src={require('../icons/castle.svg')} alt="Spooky Location" className="spookyLocationIcon"/>
+        <div className="locationCard">
+        <div className="savedLocationCardContent">
+        <div className="deleteBtnParent">
+        <button className="deleteBtn" onClick={() => 
+          DataManager.removeSavedLocation(this.props.savedLocation.id)
+          .then(() => {this.props.getSavedLocations()})}> 
+          ×</button>
+          </div>
+            {/* <img src={require('../icons/castle.svg')} alt="Spooky Location" className="spookyLocationIcon"/> */}
+          <div className="locationCardText">
           <h4>{this.props.savedLocation.title}</h4>
           <p>{this.props.savedLocation.location}</p>
-
-          <button onClick={() => 
-            DataManager.removeSavedLocation(this.props.savedLocation.id)
-            .then(() => {this.props.getSavedLocations()})}> 
-            Delete </button>
+          </div>
 
           <Link to={`/locations/${this.props.savedLocation.locationId}`}><button >Details</button></Link>
+      </div>
+      <br/>
       </div> :  null}
       </>
     );

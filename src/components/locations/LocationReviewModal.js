@@ -77,14 +77,7 @@ class LocationReviewModal extends React.Component {
                     <ModalBody>
                     <form>
                         <fieldset>
-                            <div className="reviewModalForm">
-                                <input onChange={this.handleFieldChange} type="text" id="ratingTitle" placeholder="Title" required></input>
-                                <textarea onChange={this.handleFieldChange}
-                                    id="review"
-                                    placeholder="Review"
-                                    required
-                                /><br/>
-                                <Rating
+                        <Rating
                                 name="rating"
                                 id="rating"
                                 initialRating={this.state.rating}
@@ -92,6 +85,14 @@ class LocationReviewModal extends React.Component {
                                 fullSymbol={<span style={{ color: 'black' }}><i className="fas fa-ghost fa-2x"></i></span>}
                                 onClick={this.handleRatingChange} 
                                 />
+                                <br/>
+                            <div className="reviewModalForm">
+                                <input onChange={this.handleFieldChange} type="text" id="ratingTitle" placeholder="Title" required></input>
+                                <textarea onChange={this.handleFieldChange}
+                                    id="review"
+                                    placeholder="Review"
+                                    required
+                                /><br/>  
                             </div>
                         </fieldset>
                     </form>

@@ -7,9 +7,11 @@ class LocationCard extends Component {
     return (
       <div className="locationCard">
         <div className="locationCardContent">
-            <img src={require('../icons/castle.svg')} alt="Spooky Location" className="spookyLocationIcon"/>
+            {/* <img src={require('../icons/castle.svg')} alt="Spooky Location" className="spookyLocationIcon"/> */}
+        <div  className="locationCardText">
           <h4>{this.props.location.title}</h4>
           <p>{this.props.location.location}</p>
+          </div>
           <Link to={`/locations/${this.props.location.number}`}><button>Details</button></Link>
         </div>
         <br/>

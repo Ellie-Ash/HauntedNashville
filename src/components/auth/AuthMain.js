@@ -7,11 +7,15 @@ class AuthMain extends Component {
         return (
             <React.Fragment>
                 <div className="welcomeDiv">
-                    <p> Psycho slice flames. Haunt sliced at choking cut drool. In willow trees, killer dolls are rotten teeth bite, sheep children virus nibh, in zombies brains unknown ghost creepy. Gnarled hazardous, gore Michael Myers grave ripped, trapped daring rotten worms, vampire monstrosity bleak are at flesh. Falling are graveyard graves est. Blood guns bury scream, stab graveyard crazed dark crying. Captive Agony deteriorated, fatal or chilling is, grotesque Halloween exorcism.</p>
-                </div>
+                    <h4> Welcome </h4>
+                    <p> Psycho slice flames. Haunt sliced at choking cut drool. In willow trees, killer dolls are rotten teeth bite, sheep children virus nibh, in zombies brains unknown ghost creepy. Gnarled hazardous, gore Michael Myers grave ripped, trapped daring rotten worms, vampire monstrosity bleak are at flesh.</p>
+                    {/* <div className="divider"><img src="https://efutro.com.pl/data/include/cms/KATLOG-SLUBNY-PODSTRONA/ORNAMENT-4.png" alt="..." className="mainDividerImg"></img> 
+            </div> */}
+            <br/>
                 <div className="loginRegisterBtnContainer">
                 <LoginModal {...this.props}/>
                 <RegisterModal {...this.props}/>
+                </div>
                 </div>
             </React.Fragment>
         )

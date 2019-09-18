@@ -19,24 +19,20 @@ render(){
             emptySymbol={<span style={{ color: 'gray' }}><i className="fas fa-ghost"></i></span>}
             fullSymbol={<span style={{ color: 'black' }}><i className="fas fa-ghost"></i></span>}
             />
-        <p></p>
           <p>{this.props.review.ratingTitle}</p>
           <p>{this.props.review.review}</p>
 
     {checkUser ? <div className="reviewBtnContainer">
+        <EditReviewModal 
+        {...this.props}
+        postEditedReview={this.props.postEditedReview}
+      />
         <button onClick={() => 
             DataManager.deleteReview(this.props.review.id)
             .then(() => {this.props.getReviews()})}> 
             Delete </button>
-            <EditReviewModal 
-            {...this.props}
-            postEditedReview={this.props.postEditedReview}
-          />
         </div> : null
         }
-
-          
-
           </div>
         </div>
     )

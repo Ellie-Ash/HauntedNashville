@@ -72,12 +72,11 @@ class EditReviewModal extends Component {
     render(){
         return(
             <>
-            <section className="editBtnContainer">
+            <div>
             <button
             onClick={this.toggle}>
             Edit
             </button>
-            </section>
             <div>
             <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>Review</ModalHeader>
@@ -110,6 +109,7 @@ class EditReviewModal extends Component {
                         <button onClick={this.toggle}>Cancel</button>
                     </ModalFooter>
                 </Modal>
+        </div>
         </div>
         </>
         )
