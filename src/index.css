@@ -15,6 +15,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .locationCardContainer {
   display: flex;
   flex-wrap: wrap;
@@ -32,7 +33,7 @@ body {
   max-width: 20em;
   min-width: 20em;
   min-height:15em;
-  max-height: 15em;
+  max-height: 20em;
   padding: 0em 1.5em;
   justify-content: space-evenly;
   flex-direction: column;
@@ -47,8 +48,8 @@ body {
   flex-wrap: wrap;
   max-width: 20em;
   min-width: 20em;
-  min-height: 15em;
-  max-height: 15em;
+  min-height: 16em;
+  max-height: 20em;
   padding: 0em 1.5em;
   justify-content: space-evenly;
   flex-direction: column;
@@ -64,7 +65,7 @@ body {
 .locationDetailContent {
   display: flex;
   flex-wrap: wrap;
-  padding: 2em;
+  padding: 3em;
   justify-content: space-evenly;
   flex-direction: column;
   background-color: whitesmoke;
@@ -79,7 +80,7 @@ body {
   border-radius: 4px;
   opacity: 0.8; */
   flex-wrap: wrap;
-  padding-bottom: 1.5em;
+  padding-bottom: 0em;
   flex-direction: column;
 }
 
@@ -104,6 +105,10 @@ body {
 }
 
 .editBtn {
+  margin-right: 8px;
+}
+
+.savedDetailsBtn {
   margin-right: 8px;
 }
 
@@ -174,7 +179,8 @@ input {
 
 .searchInput {
   display: flex;
-  width: 100%;
+  width: 25em;
+  height: 2em;
   margin: 0em 1em 1.5em;
   text-indent: 5px;
   border-radius: 4px;
@@ -183,7 +189,7 @@ input {
 
 ul {
   padding-left: 0%;
-  margin-bottom: 0px;
+  margin-bottom: 1em;
 }
 
 li {
@@ -220,9 +226,10 @@ a:hover {
 
 button {
   border-radius: 0.4em;
-  border-color: rgb(166, 149, 221);
-  background-color: rgb(166, 149, 221);
-  color: black;
+  border-color: rgb(144, 124, 208);
+  color: white;
+  background-color: rgb(144, 124, 208);
+  /* color: black; */
   max-height: 3em;
   width: 5em;
   text-align: center;
@@ -249,10 +256,8 @@ button {
   max-height: 6em;
 }
 
-.mainDividerImg {
-  min-width: 15em;
-  max-width: 20em;
-  max-height: 6em;
+span {
+  margin-bottom: 4px;
 }
 
 .close {

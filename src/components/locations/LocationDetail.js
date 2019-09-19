@@ -10,7 +10,9 @@ class LocationDetail extends Component {
       reviews: [],
       title: "",
       location: "",
-      marker_text: ""
+      marker_text: "",
+      latitude: "",
+      longitude: ""
   }
 
 componentDidMount(){
@@ -20,6 +22,8 @@ componentDidMount(){
         title: location.title,
         location: location.location,
         marker_text: location.marker_text,
+        latitude:  location.latitude,
+        longitude: location.longitude
       });
     });
     this.getReviews()
@@ -56,6 +60,8 @@ getReviews = () => {
             locationId={this.props.locationId}
             title={this.state.title}
             location={this.state.location}
+            latitude={this.state.latitude}
+            longitude={this.state.longitude}
             />
 
             </div>

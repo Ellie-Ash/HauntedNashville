@@ -3,17 +3,13 @@ import LocationCard from './LocationCard'
 import DataManager from '../DataManager'
 
 class LocationList extends Component {
-    // state = {
-    //     locations: [],
-    // }
-
     constructor(props) {
         super(props);
         this.state = {
             filtered: [],
             locations: []
         }
-        this.handleChange = this.handleChange.bind(this);
+        this.handleNameChange = this.handleNameChange.bind(this);
     }
 
 componentDidMount(){
@@ -32,7 +28,7 @@ componentWillReceiveProps(nextProps) {
     });
   }
 
-  handleChange(e) {
+  handleNameChange(e) {
     let currentList = [];
     let newList = [];
         if (e.target.value !== "") {
@@ -55,13 +51,13 @@ componentWillReceiveProps(nextProps) {
         })
     })
     }
-    }
+}
 
 render(){
     return(
         <>
         <div className="locationCardContainer">
-        <input type="text" className="searchInput"                placeholder="Search" onChange={this.handleChange}></input>
+        <input type="text" className="searchInput"                placeholder="Search By Name" onChange={this.handleNameChange}></input>
             {this.state.locations.map((location, i) => <LocationCard 
             key={i}
             location={location}

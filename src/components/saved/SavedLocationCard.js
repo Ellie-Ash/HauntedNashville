@@ -25,8 +25,10 @@ class SavedLocationCard extends Component {
           <h4>{this.props.savedLocation.title}</h4>
           <p>{this.props.savedLocation.location}</p>
           </div>
-
-          <Link to={`/locations/${this.props.savedLocation.locationId}`}><button >Details</button></Link>
+          <div>
+          <Link to={`/locations/${this.props.savedLocation.locationId}`}><button className="savedDetailsBtn">Details</button></Link>
+          <Link to={`/locations/${this.props.savedLocation.locationId}`}><button >Map</button></Link>
+          </div>
       </div>
       <br/>
       </div> :  null}

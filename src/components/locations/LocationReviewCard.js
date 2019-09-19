@@ -19,7 +19,7 @@ render(){
             emptySymbol={<span style={{ color: 'gray' }}><i className="fas fa-ghost"></i></span>}
             fullSymbol={<span style={{ color: 'black' }}><i className="fas fa-ghost"></i></span>}
             />
-          <p>{this.props.review.ratingTitle}</p>
+          <h4>{this.props.review.ratingTitle}</h4>
           <p>{this.props.review.review}</p>
 
     {checkUser ? <div className="reviewBtnContainer">
@@ -34,6 +34,8 @@ render(){
         </div> : null
         }
           </div>
+          <div className="divider"><img src="https://wiki.ffxiv-roleplayers.com/images/f/fa/Albauntdivide.png" alt="..." className="dividerImg"></img> 
+            </div>
         </div>
     )
 }
