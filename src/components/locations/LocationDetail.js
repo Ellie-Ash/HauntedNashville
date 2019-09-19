@@ -42,10 +42,9 @@ getReviews = () => {
         <div className="locationDetailContent">
             <h4>{this.state.title}</h4>
             <p>❖ {this.state.location}</p>
-            <br />
+            <br/>
             <p>{this.state.marker_text}</p>
-            <br/>
-            <br/>
+            <br />
 
             <div className="saveAndReviewBtns">
             <LocationReviewModal  
@@ -61,8 +60,8 @@ getReviews = () => {
 
             </div>
             
-            {/* <div className="divider"><img src="https://wiki.ffxiv-roleplayers.com/images/f/fa/Albauntdivide.png" alt="..." className="dividerImg"></img> 
-            </div> */}
+            <div className="divider"><img src="https://wiki.ffxiv-roleplayers.com/images/f/fa/Albauntdivide.png" alt="..." className="dividerImg"></img> 
+            </div>
 
             <div className="reviewCardContainer">
             {this.state.reviews.map((review, i) => 

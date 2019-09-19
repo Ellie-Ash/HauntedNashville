@@ -74,6 +74,7 @@ class EditReviewModal extends Component {
             <>
             <div>
             <button
+            className="editBtn"
             onClick={this.toggle}>
             Edit
             </button>

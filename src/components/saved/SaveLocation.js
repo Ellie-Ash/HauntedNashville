@@ -11,6 +11,15 @@ class SaveLocation extends Component {
             })
     }
 
+    constructor(props){
+        super(props)
+        this.state ={
+          button: true,
+          disabled: false
+        }
+        this.handleSave = this.handleSave.bind(this);
+      }
+
     handleSave = event => {
         event.preventDefault();
         this.setState({ loadingStatus: true });
@@ -18,17 +27,19 @@ class SaveLocation extends Component {
             userId: parseInt(sessionStorage.getItem("credentials")),
             locationId: parseInt(this.props.locationId),
             title: this.props.title,
-            location: this.props.location
+            location: this.props.location,
+            button:!this.state.button,
+            disabled: false
 
         }
         DataManager.saveLocation(saved)
-        .then(alert("Saved!"))
+        .then(this.setState({disabled: true}))
     }
 
     render() {
         return (
             <React.Fragment>
-                <button onClick={this.handleSave}> Save </button>
+                <button className={this.state.button ? "button": "falseBtn"} onClick={this.handleSave}> Save </button>
             </React.Fragment>
         )
     }

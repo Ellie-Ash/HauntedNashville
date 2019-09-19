@@ -11,8 +11,31 @@
       "username": "2",
       "password": "2",
       "id": 2
+    },
+    {
+      "email": "3",
+      "username": "3",
+      "password": "3",
+      "id": 3
     }
   ],
-  "reviews": [],
+  "reviews": [
+    {
+      "userId": 3,
+      "locationId": 94,
+      "ratingTitle": "dd",
+      "review": "d",
+      "rating": 2,
+      "id": 1
+    },
+    {
+      "userId": 3,
+      "locationId": 94,
+      "ratingTitle": "d",
+      "review": "d",
+      "rating": 1,
+      "id": 2
+    }
+  ],
   "savedLocations": []
 }

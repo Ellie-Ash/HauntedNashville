@@ -5,7 +5,7 @@ class LocationMain extends Component {
     render() {
         return (
             <React.Fragment>
-                <LocationList />
+                <LocationList/>
             </React.Fragment>
         )
     }

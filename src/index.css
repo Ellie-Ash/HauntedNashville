@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding:2em;
+  padding: 0em 2em;
 }
 
 .locationCardContent {
@@ -79,7 +79,7 @@ body {
   border-radius: 4px;
   opacity: 0.8; */
   flex-wrap: wrap;
-  padding-top: 1.5em;
+  padding-bottom: 1.5em;
   flex-direction: column;
 }
 
@@ -90,13 +90,21 @@ body {
 
 .saveAndReviewBtns {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .reviewBtnContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-top: 1.5em;
+}
+
+.reviewBtn {
+  margin-right: 8px;
+}
+
+.editBtn {
+  margin-right: 8px;
 }
 
 .deleteBtnParent {
@@ -164,8 +172,18 @@ input {
   border-style: none;
 }
 
+.searchInput {
+  display: flex;
+  width: 100%;
+  margin: 0em 1em 1.5em;
+  text-indent: 5px;
+  border-radius: 4px;
+  background-color: whitesmoke;
+}
+
 ul {
   padding-left: 0%;
+  margin-bottom: 0px;
 }
 
 li {
@@ -196,9 +214,8 @@ a:hover {
   text-align: center;
   /* font-family: 'Pirata One', cursive; */
   font-family: 'Sancreek', cursive;
-  font-size: 5em;
+  font-size: 4.5em;
   color: rgb(21, 21, 21);
-
 }
 
 button {
@@ -210,6 +227,10 @@ button {
   width: 5em;
   text-align: center;
   margin-right: 2px;
+}
+
+.falseBtn {
+  background-color: red;
 }
 
 .loginRegisterBtnContainer {
