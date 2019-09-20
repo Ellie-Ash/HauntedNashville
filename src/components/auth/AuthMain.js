@@ -8,7 +8,7 @@ class AuthMain extends Component {
             <React.Fragment>
                 <div className="welcomeDiv">
                     <h4> Welcome </h4>
-                    <p> Psycho slice flames. Haunt sliced at choking cut drool. In willow trees, killer dolls are rotten teeth bite, sheep children virus nibh, in zombies brains unknown ghost creepy. Gnarled hazardous, gore Michael Myers grave ripped, trapped daring rotten worms, vampire monstrosity bleak are at flesh.</p>
+                    <p> Boo werewolf cauldron haunted cauldron witch vampire. Witch monster drive-in chainsaw monster skeleton cauldron. Cauldron trick-or-treat nightmare jack-o-lantern witch jack-o-lantern abomination. Candy werewolf pumpkin boo scare mummy abomination. Spooky werewolf cauldron pumpkin werewolf drive-in afraid.</p>
             <br/>
                 <div className="loginRegisterBtnContainer">
                 <LoginModal {...this.props} />

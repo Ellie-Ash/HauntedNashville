@@ -13,7 +13,7 @@ render(){
         
           <div className="makeRow">
           <div className="makeColumn">
-          <span style={{ color: 'whitesmoke' }}><i className="fas fa-skull fa-2x"></i></span>
+          <span style={{ color: 'white' }}><i className="fas fa-skull fa-2x"></i></span>
           <p>{username}</p>
           </div>
           <div className="makeColumn">

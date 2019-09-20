@@ -10,17 +10,22 @@ body {
 .welcomeDiv {
   background-color: whitesmoke;
   opacity: 0.75;
-  margin: 2em;
+  margin: 0em;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 0px;
+  margin-top: 8px;
 }
 
 .locationCardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 0em 2em;
+  padding: 1em 2em;
 }
 
 .locationCardContent {
@@ -59,7 +64,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 2em;
+  padding: 1em;
 }
 
 .locationDetailContent {
@@ -154,7 +159,19 @@ body {
 }
 
 .fa-skull {
-  background-color: rgb(95, 77, 121);
+  background-color: rgb(21, 21, 21);
+  border-radius: 100%;
+  padding: 8px;
+}
+
+.fa-sign-out-alt {
+  background-color: rgb(21, 21, 21);
+  border-radius: 100%;
+  padding: 8px;
+}
+
+.fa-bars {
+  background-color: rgb(21, 21, 21);
   border-radius: 100%;
   padding: 8px;
 }
@@ -185,7 +202,7 @@ input {
   display: flex;
   width: 25em;
   height: 2em;
-  margin: 0em 1em 1.5em;
+  margin: 1em 1em 1.5em;
   text-indent: 5px;
   border-radius: 4px;
   background-color: whitesmoke;
@@ -193,7 +210,7 @@ input {
 
 ul {
   padding-left: 0%;
-  margin-bottom: 1em;
+  margin: 1em 0em;
 }
 
 li {
