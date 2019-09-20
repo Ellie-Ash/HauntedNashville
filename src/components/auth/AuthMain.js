@@ -9,7 +9,7 @@ class AuthMain extends Component {
                 <div className="welcomeDiv">
                     <div className="welcomeContent">
                     <h4> Welcome </h4>
-                    <p> Boo werewolf cauldron haunted cauldron witch vampire. Witch monster drive-in chainsaw monster skeleton cauldron. Cauldron trick-or-treat nightmare jack-o-lantern witch jack-o-lantern abomination. Candy werewolf pumpkin boo scare mummy abomination. Spooky werewolf cauldron pumpkin werewolf drive-in afraid.</p>
+                    <p className="indent"> Boo werewolf cauldron haunted cauldron witch vampire. Witch monster drive-in chainsaw monster skeleton cauldron.</p>
                     </div>
             <br/>
                 <div className="loginRegisterBtnContainer">

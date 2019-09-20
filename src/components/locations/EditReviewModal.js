@@ -10,6 +10,7 @@ class EditReviewModal extends Component {
             reviews: [],
             locationId: "",
             userId: "",
+            username: "",
             ratingTitle: "",
             review: "",
             rating: 0,
@@ -45,6 +46,7 @@ class EditReviewModal extends Component {
             const editedReview = {
                 id: this.props.review.id,
                 userId: parseInt(sessionStorage.getItem("credentials")),
+                username: sessionStorage.getItem("username"),
                 locationId: parseInt(this.props.locationId),
                 ratingTitle: this.state.ratingTitle,
                 review: this.state.review,
@@ -60,6 +62,7 @@ class EditReviewModal extends Component {
         .then(review => {
             this.setState({
                 userId: review.userId,
+                username: review.username,
                 locationId: review.locationId,
                 ratingTitle: review.ratingTitle,
                 review: review.review,
@@ -85,6 +88,14 @@ class EditReviewModal extends Component {
                     <form>
                         <fieldset>
                             <div className="editReviewModal">
+                            <Rating
+                                name="rating"
+                                id="rating"
+                                initialRating={this.state.rating}
+                                emptySymbol={<span style={{ color: 'gray' }}><i className="fas fa-ghost fa-2x"></i></span>}
+                                fullSymbol={<span style={{ color: 'black' }}><i className="fas fa-ghost fa-2x"></i></span>}
+                                onClick={this.handleRatingChange} 
+                                />
                                 <input onChange={this.handleFieldChange} type="text" id="ratingTitle" placeholder="Title" required
                                 value={this.state.ratingTitle}></input>
                                 <textarea onChange={this.handleFieldChange}
@@ -93,14 +104,7 @@ class EditReviewModal extends Component {
                                 placeholder="Review"
                                 required
                                 /><br/>
-                                <Rating
-                                name="rating"
-                                id="rating"
-                                initialRating={this.state.rating}
-                                emptySymbol={<span style={{ color: 'gray' }}><i className="fas fa-ghost fa-2x"></i></span>}
-                                fullSymbol={<span style={{ color: 'black' }}><i className="fas fa-ghost fa-2x"></i></span>}
-                                onClick={this.handleRatingChange} 
-                                />
+                                
                             </div>
                         </fieldset>
                     </form>

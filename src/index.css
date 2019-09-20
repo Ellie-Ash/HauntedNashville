@@ -226,6 +226,10 @@ p {
   margin-bottom: 0em;
 }
 
+/* .indent {
+  text-indent: 4px;
+} */
+
 i {
   padding: 2px;
 }
