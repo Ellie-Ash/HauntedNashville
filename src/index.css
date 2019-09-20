@@ -1,5 +1,5 @@
 body {
-  background: url("http://www.catholiclane.com/wp-content/uploads/fog.jpg") no-repeat center center fixed;
+  background: url("https://s3.thingpic.com/images/rv/T774McUn8NPVaLEqXm21jDAS.jpeg") no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
   /* font-family: 'Roboto Condensed', sans-serif; */
@@ -8,7 +8,7 @@ body {
 }
 
 .welcomeDiv {
-  background-color: whitesmoke;
+  background-color: rgb(241,241,241);
   opacity: 0.75;
   margin: 0em;
   border-radius: 4px;
@@ -35,7 +35,7 @@ h1 {
 .locationCardContent {
   display: flex;
   /* align-items: center; */
-  background-color: whitesmoke;
+  background-color: rgb(241,241,241);
   border-radius: 4px;
   opacity: 0.75;
   flex-wrap: wrap;
@@ -51,7 +51,7 @@ h1 {
 .savedLocationCardContent {
   display: flex;
   /* align-items: center; */
-  background-color: whitesmoke;
+  background-color: rgb(241,241,241);
   border-radius: 4px;
   opacity: 0.75;
   flex-wrap: wrap;
@@ -77,9 +77,9 @@ h1 {
   padding: 3em;
   justify-content: space-evenly;
   flex-direction: column;
-  background-color: whitesmoke;
+  background-color: rgb(241,241,241);
   border-radius: 4px;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 .locationReviewCardContent {
@@ -137,7 +137,7 @@ h1 {
   display: flex;
   justify-content: center;
   border-radius: 100%;
-  background-color: whitesmoke;
+  background-color: rgb(241,241,241);
   border-style: none;
   color: #7B7B7B;
   padding: 0em;
@@ -209,7 +209,7 @@ input {
   margin-bottom: 1em;
   text-indent: 5px;
   border-radius: 4px;
-  background-color: whitesmoke;
+  background-color: rgb(241,241,241);
 }
 
 ul {
@@ -290,7 +290,7 @@ span {
   width: 2em;
 }
 .close:hover {
-  background-color: whitesmoke;
+  background-color: rgb(241,241,241);
   color: black;
 }
 
@@ -308,7 +308,7 @@ span {
 }
 
 .modal-content {
-  background-color: whitesmoke;
+  background-color: rgb(241,241,241);
   color: black;
 }
 
