@@ -4,7 +4,6 @@ import DataManager from '../DataManager'
 import EditReviewModal from './EditReviewModal'
 class LocationReviewCard extends Component {
 render(){
-  const username = sessionStorage.getItem("username")
     const activeUser = parseInt(sessionStorage.getItem("credentials"))
     const checkUser = this.props.review.userId === activeUser
     return(
@@ -14,7 +13,7 @@ render(){
           <div className="makeRow">
           <div className="makeColumn">
           <span style={{ color: 'white' }}><i className="fas fa-skull fa-2x"></i></span>
-          <p>{username}</p>
+          <p>{this.props.review.username}</p>
           </div>
           <div className="makeColumn">
           <Rating

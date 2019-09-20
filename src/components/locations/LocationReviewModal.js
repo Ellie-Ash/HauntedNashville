@@ -8,8 +8,10 @@ class LocationReviewModal extends React.Component {
         super(props);
         this.state = {
             reviews: [],
+            users: [],
             locationId: "",
             userId: "",
+            username: "",
             ratingTitle: "",
             review: "",
             rating: 0,
@@ -25,6 +27,12 @@ class LocationReviewModal extends React.Component {
             .then(reviews => {
                 this.setState({
                     reviews: reviews
+                })
+            })
+            DataManager.getAllUsers()
+            .then(users => {
+                this.setState({
+                    users: users
                 })
             })
     }
@@ -57,6 +65,7 @@ class LocationReviewModal extends React.Component {
         const newReview = {
             userId: parseInt(sessionStorage.getItem("credentials")),
             locationId: parseInt(this.props.locationId),
+            username: sessionStorage.getItem("username"),
             ratingTitle: this.state.ratingTitle,
             review: this.state.review,
             rating: parseInt(this.state.rating),

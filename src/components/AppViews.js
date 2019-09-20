@@ -8,8 +8,7 @@ import LocationDetail from './locations/LocationDetail'
 export default class AppViews extends Component {
   isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
   activeUser = () => parseInt(sessionStorage.getItem("credentials"))
-
-
+  
   render() {
     return (
       <React.Fragment>

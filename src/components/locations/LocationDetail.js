@@ -56,9 +56,7 @@ getReviews = () => {
             locationId={this.props.locationId}
             title={this.state.title}
             location={this.state.location}
-            
             />
-
             </div>
             
             <div className="divider"><img src="https://wiki.ffxiv-roleplayers.com/images/f/fa/Albauntdivide.png" alt="..." className="dividerImg"></img> 
@@ -73,6 +71,7 @@ getReviews = () => {
             getReviews={this.getReviews}
             {...this.props}
             />)}
+            
         </div>
         </div>
       </div>

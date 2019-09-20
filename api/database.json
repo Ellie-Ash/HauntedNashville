@@ -8,17 +8,36 @@
     },
     {
       "email": "2",
-      "username": "2",
+      "username": "EllieAsh",
       "password": "2",
       "id": 2
     },
     {
       "email": "3",
-      "username": "3",
+      "username": "Shalissa",
       "password": "3",
       "id": 3
     }
   ],
-  "reviews": [],
+  "reviews": [
+    {
+      "userId": 2,
+      "locationId": 95,
+      "username": "EllieAsh",
+      "ratingTitle": "dfsdfdf",
+      "review": "sdfdfsdf",
+      "rating": 3,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "locationId": 95,
+      "username": "Ellie",
+      "ratingTitle": "sdfsdfdsds",
+      "review": "fsdf",
+      "rating": 5,
+      "id": 2
+    }
+  ],
   "savedLocations": []
 }

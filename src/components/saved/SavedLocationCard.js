@@ -30,7 +30,7 @@ class SavedLocationCard extends Component {
           </div>
       </div>
       <br/>
-      </div> :  null}
+      </div> : <div><p> You do not have any saved locations.</p></div>}
       </>
     );
   }
