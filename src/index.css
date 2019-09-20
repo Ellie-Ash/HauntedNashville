@@ -206,7 +206,7 @@ input {
   display: flex;
   width: 25em;
   height: 2em;
-  margin: 1em 1em 1.5em;
+  margin-bottom: 1em;
   text-indent: 5px;
   border-radius: 4px;
   background-color: whitesmoke;
