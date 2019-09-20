@@ -13,7 +13,6 @@ class NavBar extends Component {
    
     render() {
         const activeUser = parseInt(sessionStorage.getItem("credentials"))
-        console.log(activeUser)
         const checkUser = isNaN(activeUser)
         return (
             <nav className="mainNav">

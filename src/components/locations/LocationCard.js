@@ -11,8 +11,16 @@ class LocationCard extends Component {
         <div  className="locationCardText">
           <h4>{this.props.location.title}</h4>
           <p>{this.props.location.location}</p>
+          {/* <p>{this.props.location.latitude}</p>
+          <p>{this.props.location.longitude}</p> */}
           </div>
-          <Link to={`/locations/${this.props.location.number}`}><button>Details</button></Link>
+
+          <div>
+          <Link to={`/locations/${this.props.location.number}`}><button className="detailsBtn">Details</button></Link>
+
+          <a href={`https://www.google.com/maps/search/?api=1&query=${this.props.location.latitude},${this.props.location.longitude}`}
+          ><button>Map</button></a>
+          </div>
         </div>
         <br/>
       </div>

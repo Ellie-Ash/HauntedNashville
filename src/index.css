@@ -104,6 +104,10 @@ body {
   margin-right: 8px;
 }
 
+.detailsBtn {
+  margin-right: 8px;
+}
+
 .editBtn {
   margin-right: 8px;
 }
@@ -149,11 +153,11 @@ body {
   opacity: 1;
 }
 
-/* .fa-skull {
-  background-color: rgb(254, 229, 86);
+.fa-skull {
+  background-color: rgb(95, 77, 121);
   border-radius: 100%;
-  padding: 6px;
-} */
+  padding: 8px;
+}
 
 .fa-ghost {
   font-size: 1.5em;
@@ -226,6 +230,7 @@ a:hover {
 
 button {
   border-radius: 0.4em;
+  border-style: none;
   border-color: rgb(144, 124, 208);
   color: white;
   background-color: rgb(144, 124, 208);
@@ -284,4 +289,15 @@ span {
 .modal-content {
   background-color: whitesmoke;
   color: black;
+}
+
+.makeRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.makeColumn {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
 }

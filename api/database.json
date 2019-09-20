@@ -2,7 +2,7 @@
   "users": [
     {
       "email": "1",
-      "username": "1",
+      "username": "lellie",
       "password": "1",
       "id": 1
     },
@@ -20,5 +20,13 @@
     }
   ],
   "reviews": [],
-  "savedLocations": []
+  "savedLocations": [
+    {
+      "userId": 1,
+      "locationId": 95,
+      "title": "CAPT. ALEXANDER EWING\n“Devil Alex”",
+      "location": "Ewing Drive at Knight Road",
+      "id": 1
+    }
+  ]
 }

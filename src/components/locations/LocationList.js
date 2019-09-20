@@ -58,9 +58,11 @@ render(){
         <>
         <div className="locationCardContainer">
         <input type="text" className="searchInput"                placeholder="Search By Name" onChange={this.handleNameChange}></input>
-            {this.state.locations.map((location, i) => <LocationCard 
+            {this.state.locations.map((location, i,latitude, longitude) => <LocationCard 
             key={i}
             location={location}
+            latitude={latitude}
+            longitude={longitude}
             />)}
         </div>
         </>

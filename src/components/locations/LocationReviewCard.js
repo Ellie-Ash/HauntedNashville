@@ -4,14 +4,20 @@ import DataManager from '../DataManager'
 import EditReviewModal from './EditReviewModal'
 class LocationReviewCard extends Component {
 render(){
+  const username = sessionStorage.getItem("username")
     const activeUser = parseInt(sessionStorage.getItem("credentials"))
     const checkUser = this.props.review.userId === activeUser
     return(
         <div className="reviewCard">
         <div className="locationReviewCardContent">
-        {/* <span style={{ color: 'gray' }}><i className="fas fa-skull fa-2x"></i></span>
-        <br /> */}
-        <Rating
+        
+          <div className="makeRow">
+          <div className="makeColumn">
+          <span style={{ color: 'whitesmoke' }}><i className="fas fa-skull fa-2x"></i></span>
+          <p>{username}</p>
+          </div>
+          <div className="makeColumn">
+          <Rating
             readonly
             name="rating"
             id="rating"
@@ -21,6 +27,8 @@ render(){
             />
           <h4>{this.props.review.ratingTitle}</h4>
           <p>{this.props.review.review}</p>
+          </div>
+          </div>
 
     {checkUser ? <div className="reviewBtnContainer">
         <EditReviewModal 
