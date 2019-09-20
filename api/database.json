@@ -21,22 +21,13 @@
   ],
   "reviews": [
     {
-      "userId": 2,
-      "locationId": 95,
-      "username": "EllieAsh",
-      "ratingTitle": "dfsdfdf",
-      "review": "sdfdfsdf",
-      "rating": 3,
-      "id": 1
-    },
-    {
       "userId": 1,
-      "locationId": 95,
+      "locationId": 94,
       "username": "Ellie",
-      "ratingTitle": "sdfsdfdsds",
-      "review": "fsdf",
-      "rating": 5,
-      "id": 2
+      "ratingTitle": "werwerwer",
+      "review": "rerewer",
+      "rating": 2,
+      "id": 1
     }
   ],
   "savedLocations": []

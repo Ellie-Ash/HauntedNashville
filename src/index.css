@@ -16,6 +16,10 @@ body {
   flex-direction: column;
 }
 
+.welcomeContent {
+  text-align: start;
+}
+
 h1 {
   margin-bottom: 0px;
   margin-top: 8px;
@@ -264,7 +268,7 @@ button {
 
 .loginRegisterBtnContainer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .divider {
