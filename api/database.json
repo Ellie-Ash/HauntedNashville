@@ -1,34 +1,16 @@
 {
   "users": [
     {
-      "email": "1",
-      "username": "Ellie",
-      "password": "1",
+      "email": "e@test.com",
+      "username": "ellie",
+      "password": "123",
       "id": 1
     },
     {
-      "email": "2",
-      "username": "Bryan",
-      "password": "2",
+      "email": "b@test.com",
+      "username": "bryan",
+      "password": "123",
       "id": 2
-    },
-    {
-      "email": "3",
-      "username": "Andy",
-      "password": "3",
-      "id": 3
-    },
-    {
-      "email": "5",
-      "username": "5",
-      "password": "5",
-      "id": 4
-    },
-    {
-      "email": "4",
-      "username": "4",
-      "password": "4",
-      "id": 5
     }
   ],
   "reviews": [],
