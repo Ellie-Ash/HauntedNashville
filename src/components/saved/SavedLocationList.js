@@ -17,7 +17,6 @@ componentDidMount(){
         this.setState({
             savedLocations: savedLocations
         })
-        console.log("saved", savedLocations)
     })
 }
 

@@ -1,19 +1,58 @@
 {
   "users": [
     {
-      "email": "e@test.com",
+      "email": "e@e.com",
       "username": "ellie",
       "password": "123",
       "id": 1
     },
     {
-      "email": "b@test.com",
+      "email": "b@b.com",
       "username": "bryan",
       "password": "123",
       "id": 2
+    },
+    {
+      "email": "1@1.com",
+      "username": "demo",
+      "password": "123",
+      "id": 3
     }
   ],
-  "reviews": [],
+  "reviews": [
+    {
+      "id": 1,
+      "userId": 1,
+      "username": "ellie",
+      "locationId": 35,
+      "ratingTitle": "kinda spooky",
+      "review": "Mental hospital sliced drowning. Falling are graveyard graves est. Falling are graveyard graves est",
+      "rating": 3
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "username": "bryan",
+      "locationId": 35,
+      "ratingTitle": "pretty spooky",
+      "review": "With demon scourge terrifying. Haunt suicide silent, gory as demonic alarming, buried in fallen angel. Flames at crazy slicing wit.",
+      "rating": 4
+    }
+  ],
   "savedLocations": [
+    {
+      "userId": 3,
+      "locationId": 128,
+      "title": "DUTCHMAN’S CURVE TRAIN WRECK",
+      "location": "White Bridge Pike at Richland Creek Greenway Trailhead",
+      "id": 1
+    },
+    {
+      "userId": 3,
+      "locationId": 119,
+      "title": "THE TEMPLE CEMETERY",
+      "location": "Temple Cemetery, 2001 15th Avenue North (inside cemetery)",
+      "id": 2
+    }
   ]
 }

@@ -13,7 +13,6 @@ export default {
         return fetch(`https://data.nashville.gov/resource/vk65-u7my.json?number=${id}`)
         .then(result => result.json())
         .then(response => {
-            console.log(response, "in fetch")
             return response[0]
         })
     },
@@ -69,7 +68,6 @@ export default {
         return fetch(`${remoteURL}/savedLocations`)
         .then(result => result.json())
         .then(response => {
-            console.log(response, "saved fetch")
             return response
         })   
     },

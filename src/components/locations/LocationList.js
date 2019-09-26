@@ -33,7 +33,6 @@ componentWillReceiveProps(nextProps) {
     let newList = [];
         if (e.target.value !== "") {
         currentList = this.state.locations;
-        console.log("state before filter", this.state.locations)
         newList = currentList.filter(location => {
         const lowercase = location.title.toLowerCase();
         const filter = e.target.value.toLowerCase();
