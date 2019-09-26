@@ -48,7 +48,7 @@ class RegisterModal extends React.Component {
         }  else if (this.state.users.find(user => user.email === this.state.email)) {
         alert("This email address is already associated with an account.")
         } else if (this.state.password === "" ||this.state.email === "" || this.state.confirmPassword === ""){
-        alert("Please fill out all fields")
+        alert("Please fill out all fields.")
         }
         else {
         const newUserObject = {
