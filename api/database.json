@@ -37,21 +37,30 @@
       "ratingTitle": "pretty spooky",
       "review": "With demon scourge terrifying. Haunt suicide silent, gory as demonic alarming, buried in fallen angel. Flames at crazy slicing wit.",
       "rating": 4
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "username": "demo",
+      "locationId": 35,
+      "ratingTitle": "very spooky",
+      "review": "xfgdhtdthf",
+      "rating": 5
     }
   ],
   "savedLocations": [
     {
       "userId": 3,
-      "locationId": 128,
-      "title": "DUTCHMAN’S CURVE TRAIN WRECK",
-      "location": "White Bridge Pike at Richland Creek Greenway Trailhead",
+      "locationId": 119,
+      "title": "THE TEMPLE CEMETERY",
+      "location": "Temple Cemetery, 2001 15th Avenue North (inside cemetery)",
       "id": 1
     },
     {
       "userId": 3,
-      "locationId": 119,
-      "title": "THE TEMPLE CEMETERY",
-      "location": "Temple Cemetery, 2001 15th Avenue North (inside cemetery)",
+      "locationId": 128,
+      "title": "DUTCHMAN’S CURVE TRAIN WRECK",
+      "location": "White Bridge Pike at Richland Creek Greenway Trailhead",
       "id": 2
     }
   ]

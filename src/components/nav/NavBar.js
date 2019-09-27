@@ -28,7 +28,7 @@ class NavBar extends Component {
                         <Link onClick={this.logout} className="navLink" to="/"><span style={{ color: 'whitesmoke' }}><i className="fas fa-sign-out-alt"></i></span></Link>
                     </li>
                 </ul> }
-            <h1 className="mainHeader"> HAUNTED NASHVILLE </h1>
+            <h1 className="mainHeader"> Haunted Nashville </h1>
             {/* <div className="divider"><img src="https://s-media-cache-ak0.pinimg.com/originals/d8/8d/b2/d88db24705469bee3122183d38192a4e.png" alt="..." className="dividerImg"></img> 
             </div> */}
             
