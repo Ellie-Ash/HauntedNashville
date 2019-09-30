@@ -32,68 +32,13 @@ These are all of the skills and concepts used to create this app.
 {
   "users": [
     {
-      "email": "e@e.com",
-      "username": "ellie",
-      "password": "123",
-      "id": 1
-    },
-    {
-      "email": "b@b.com",
-      "username": "bryan",
-      "password": "123",
-      "id": 2
-    },
-    {
       "email": "1@1.com",
       "username": "demo",
       "password": "123",
-      "id": 3
-    }
-  ],
-  "reviews": [
-    {
-      "id": 1,
-      "userId": 1,
-      "username": "ellie",
-      "locationId": 35,
-      "ratingTitle": "kinda spooky",
-      "review": "There were orbs in the pictures I took but I think my camera was just dirty",
-      "rating": 3
-    },
-    {
-      "id": 2,
-      "userId": 2,
-      "username": "bryan",
-      "locationId": 35,
-      "ratingTitle": "pretty spooky",
-      "review": "I definitely walked through a cold spot. Like, the air was definitely colder than normal.",
-      "rating": 4
-    },
-    {
-      "id": 3,
-      "userId": 3,
-      "username": "demo",
-      "locationId": 35,
-      "ratingTitle": "very spooky",
-      "review": ".....",
-      "rating": 5
-    }
-  ],
-  "savedLocations": [
-    {
-      "userId": 3,
-      "locationId": 119,
-      "title": "THE TEMPLE CEMETERY",
-      "location": "Temple Cemetery, 2001 15th Avenue North (inside cemetery)",
       "id": 1
-    },
-    {
-      "userId": 3,
-      "locationId": 128,
-      "title": "DUTCHMAN’S CURVE TRAIN WRECK",
-      "location": "White Bridge Pike at Richland Creek Greenway Trailhead",
-      "id": 2
     }
-  ]
+  ],
+  "reviews": [],
+  "savedLocations": []
 }
 ```
