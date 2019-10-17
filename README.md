@@ -17,7 +17,7 @@ These are all of the skills and concepts used to create this app.
 1. Relational data
 1. Session Storage
 
-## How to Launch Nutshell
+## How to Launch
 
 1. Clone the repository from Github
 1. Open your terminal and type the command "npm install" to install React
