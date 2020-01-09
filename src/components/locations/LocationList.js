@@ -34,7 +34,7 @@ componentWillReceiveProps(nextProps) {
         if (e.target.value !== "") {
         currentList = this.state.locations;
         newList = currentList.filter(location => {
-        const lowercase = location.title.toLowerCase();
+        const lowercase = location.marker_name.toLowerCase();
         const filter = e.target.value.toLowerCase();
         return lowercase.includes(filter);
     });

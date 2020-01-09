@@ -17,7 +17,7 @@ class SaveLocation extends Component {
         const saved = {
             userId: parseInt(sessionStorage.getItem("credentials")),
             locationId: parseInt(this.props.locationId),
-            title: this.props.title,
+            marker_name: this.props.marker_name,
             location: this.props.location,
             latitude: this.props.latitude,
             longitude: this.props.longitude

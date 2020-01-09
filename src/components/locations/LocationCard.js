@@ -12,7 +12,8 @@ class LocationCard extends Component {
         <div className="locationCardContent">
             {/* <img src={require('../icons/castle.svg')} alt="Spooky Location" className="spookyLocationIcon"/> */}
         <div  className="locationCardText">
-          <h4>{this.props.location.title}</h4>
+          <h4>{this.props.location.marker_name}</h4>
+          
           <p>{this.props.location.location}</p>
           </div>
 

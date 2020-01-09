@@ -22,7 +22,7 @@ class SavedLocationCard extends Component {
           </div>
             {/* <img src={require('../icons/castle.svg')} alt="Spooky Location" className="spookyLocationIcon"/> */}
           <div className="locationCardText">
-          <h4>{this.props.savedLocation.title}</h4>
+          <h4>{this.props.savedLocation.marker_name}</h4>
           <p>{this.props.savedLocation.location}</p>
           </div>
           <div>
@@ -30,7 +30,7 @@ class SavedLocationCard extends Component {
           </div>
       </div>
       <br/>
-      </div> : <div><p> You do not have any saved locations.</p></div>}
+      </div> : <p></p>}
       </>
     );
   }

@@ -8,7 +8,7 @@ class LocationDetail extends Component {
 
   state = {
       reviews: [],
-      title: "",
+      marker_name: "",
       location: "",
       marker_text: "",
   }
@@ -17,7 +17,7 @@ componentDidMount(){
     DataManager.getLocation(this.props.locationId)
     .then((location) => {
       this.setState({
-        title: location.title,
+        marker_name: location.marker_name,
         location: location.location,
         marker_text: location.marker_text,
       });
@@ -37,10 +37,12 @@ getReviews = () => {
 
 
   render() {
+    console.log(this.state.marker_name);
     return (
+
       <div className="locationDetailContainer">
         <div className="locationDetailContent">
-            <h4>{this.state.title}</h4>
+            <h4>{this.state.marker_name}</h4>
             <p>❖ {this.state.location}</p>
             <br/>
             <p>{this.state.marker_text}</p>
@@ -54,7 +56,7 @@ getReviews = () => {
 
             <SaveLocation
             locationId={this.props.locationId}
-            title={this.state.title}
+            marker_name={this.state.marker_name}
             location={this.state.location}
             />
             </div>

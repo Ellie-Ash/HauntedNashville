@@ -6,6 +6,7 @@ class LocationMain extends Component {
         return (
             <React.Fragment>
                 <LocationList/>
+                
             </React.Fragment>
         )
     }

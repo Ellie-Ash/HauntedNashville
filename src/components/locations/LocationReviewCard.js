@@ -24,7 +24,7 @@ render(){
             emptySymbol={<span style={{ color: 'gray' }}><i className="fas fa-ghost"></i></span>}
             fullSymbol={<span style={{ color: 'black' }}><i className="fas fa-ghost"></i></span>}
             />
-          <h4>{this.props.review.ratingTitle}</h4>
+          <h5 class="reviewTitle">{this.props.review.ratingTitle}</h5>
           <p>{this.props.review.review}</p>
           </div>
           </div>
